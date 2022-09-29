@@ -17,9 +17,8 @@ public class Stack implements Function {
 
     @Override
     public void push(char input) {
-        if (top < 9) {
-            arrayStack[top + 1] = input;
-            top++;
+        if (top < size - 1) {
+            arrayStack[++top] = input;
             System.out.println(input + "값을 스택에 넣었습니다");
         } else {
             System.out.println("스택이 가득 찼습니다");
@@ -40,26 +39,30 @@ public class Stack implements Function {
     }
 
     @Override
-    public void pop() {
+    public char pop() {
         if (!isEmpty()) {
-            char tmp = arrayStack[top];
-            top--;
+            char tmp = arrayStack[top--];
             System.out.println(tmp + " 제거 완료");
+            return tmp;
 
         } else {
             System.out.println("스택이 비어 있습니다");
+            return 0;
         }
     }
 
     @Override
-    public void peek() {
+    public char peek() {
         if (!isEmpty()) {
             System.out.println("현재 스택의 top: " + arrayStack[top]);
+            return arrayStack[top];
         } else {
             System.out.println("스택이 비어 있습니다");
+            return 0;
         }
     }
 
+    @Override
     public void printStack() {
         if (isEmpty()) {
             System.out.println("Stack is empty");
@@ -71,7 +74,9 @@ public class Stack implements Function {
             System.out.println("가 있습니다");
         }
     }
-    public void number(){
-        System.out.println("현재 스택에는 "+(top+1)+"개의 멤버가 있습니다");
+
+    @Override
+    public void number() {
+        System.out.println("현재 스택에는 " + (top + 1) + "개의 멤버가 있습니다");
     }
 }

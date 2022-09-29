@@ -7,10 +7,12 @@ public interface Function {
 
     void clear();
 
-    void pop();
+    char pop();
 
-    void peek();
+    char peek();
 
     void number();
+
+    void printStack();
 
 }
