@@ -1,8 +1,6 @@
 package _0926.employee;
 
-import _0926.employee.Employee;
-
-public class Programmer extends Employee {
+public class Programmer extends Employee1 {
     private int salary;
     public Programmer(){}
     public Programmer(int salary){
