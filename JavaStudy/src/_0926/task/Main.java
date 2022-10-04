@@ -1,5 +1,5 @@
 package _0926.task;
-
+/*
 public class Main {
     public static void main(String[] args) {
         Shape[] shape = new Shape[2];
@@ -13,4 +13,4 @@ public class Main {
         }
         System.out.println("넓이의 합:" + sum);
     }
-}
+}*/
