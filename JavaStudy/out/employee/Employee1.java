@@ -1,8 +1,8 @@
 package _0926.employee;
 
-public class Employee {
+public class Employee1 {
     private int salary;
-    public Employee(){}
+    public Employee1(){}
     public int getSalary(){
         return salary;
     }
