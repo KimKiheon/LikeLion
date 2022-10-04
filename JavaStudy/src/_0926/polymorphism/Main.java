@@ -8,7 +8,7 @@ public class Main {
         Rectangle rectangle = new Rectangle();
         rectangle.draw();
 
-        Shape shape2 = new Rectangle();
+        Shape shape2 = new Triangle();
         shape2.draw();
     }
 }

@@ -10,7 +10,7 @@ public class CurrencyCnt {
         money = sc.nextInt();
         int coin[] = {50000, 10000, 5000, 1000, 500, 100, 50, 10};
         int ans[] = new int[8];
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < coin.length; i++) {
             ans[i] = money / coin[i];
             money %= coin[i];
             System.out.println(coin[i] + "원" + ans[i] + "개");
