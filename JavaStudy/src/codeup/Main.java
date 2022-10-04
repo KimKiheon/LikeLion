@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int num;
-        Scanner sc = new Scanner(System.in);
-        num=sc.nextInt();
-        System.out.println(num);
+        System.out.println("\u250C\u252C\u2510");
+        System.out.println("\u251C\u253C\u2524");
+        System.out.println("\u2514\u2534\u2518");
+
     }
 }
