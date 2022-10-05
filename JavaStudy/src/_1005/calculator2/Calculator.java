@@ -6,6 +6,7 @@ public class Calculator {
 
     public Calculator(NumberGenerator numberGenerator) {
         this.numberGenerator = numberGenerator;
+        this.baseNum = 10;
     }
 
     public Calculator(NumberGenerator numberGenerator, int baseNum) {
