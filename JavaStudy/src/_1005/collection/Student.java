@@ -10,6 +10,8 @@ public class Student {
         this.gitRepositoryAddress=gitRepositoryAddress;
     }
 
+    //list 출력시 사용  *****
+    @Override
     public String toString(){
         return "classNumber: "+classNumber + " name: "+name+" git주소: "+gitRepositoryAddress;
     }
