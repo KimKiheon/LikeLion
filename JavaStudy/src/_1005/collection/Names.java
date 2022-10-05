@@ -5,6 +5,16 @@ import java.util.List;
 
 public class Names {
     private List<String> students = new ArrayList<>();
+    private List<Student> studentObjs = new ArrayList<>();
+
+    public List<Student> getStudentObjs(){
+        this.studentObjs.add(new Student(2,"김기헌","https://github.com/KimKiheon?tab=repositories"));
+        this.studentObjs.add(new Student(1,"권하준", "https://github.com/dongyeon-0822/java-project-exercise"));
+        this.studentObjs.add(new Student(1,"조성윤","https://github.com/kang-subin/Java"));
+        this.studentObjs.add(new Student(3,"안예은","https://github.com/KoKwanwun/LikeLion.git"));
+        this.studentObjs.add(new Student(1,"남우빈","https://github.com/lcomment/Algorithm_Solution--Java/tree/main/LikeLion"));
+        return studentObjs;
+    }
 
     public List<String> getName() {
         students.add("권하준");
@@ -39,7 +49,6 @@ public class Names {
         students.add("노유주");
         students.add("전율");
         students.add("노아린");
-
         students.add("권아윤");
         students.add("송태서");
         students.add("정라온");
