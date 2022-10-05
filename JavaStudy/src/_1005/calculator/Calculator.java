@@ -1,4 +1,4 @@
-package _1005;
+package _1005.calculator;
 
 public class Calculator {
     private int a, b;

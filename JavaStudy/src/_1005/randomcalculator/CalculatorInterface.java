@@ -1,4 +1,4 @@
-package _1005;
+package _1005.randomcalculator;
 
 public interface CalculatorInterface {
     void plus(int a);

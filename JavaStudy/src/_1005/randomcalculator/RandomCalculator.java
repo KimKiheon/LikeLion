@@ -1,6 +1,6 @@
-package _1005;
+package _1005.randomcalculator;
 
-public class RandomCalculator implements CalculatorInterface{
+public class RandomCalculator implements CalculatorInterface {
 
     private int b = (int) (Math.random() * 10);
 

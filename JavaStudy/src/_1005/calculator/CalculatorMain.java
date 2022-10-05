@@ -1,4 +1,4 @@
-package _1005;
+package _1005.calculator;
 
 public class CalculatorMain {
     public static void main(String[] args) {
