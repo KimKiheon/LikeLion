@@ -2,21 +2,20 @@ package _1005;
 
 public class RandomCalculator implements CalculatorInterface{
 
+    private int b = (int) (Math.random() * 10);
+
     @Override
     public void plus(int a) {
-        int b = (int) (Math.random() * 10);
         System.out.println(a + b);
     }
 
     @Override
     public void minus(int a) {
-        int b = (int) (Math.random() * 10);
         System.out.println(a - b);
     }
 
     @Override
     public void multiple(int a) {
-        int b = (int) (Math.random() * 10);
         System.out.println(a * b);
     }
 
