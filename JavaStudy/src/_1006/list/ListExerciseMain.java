@@ -1,4 +1,4 @@
-package _1006;
+package _1006.list;
 
 import java.util.List;
 
