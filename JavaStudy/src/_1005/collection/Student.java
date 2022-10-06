@@ -16,3 +16,5 @@ public class Student {
         return "classNumber: "+classNumber + " name: "+name+" git주소: "+gitRepositoryAddress;
     }
 }
+
+
