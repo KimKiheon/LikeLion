@@ -1,12 +1,11 @@
 package _1006.map;
 
-import _1005.collection.Student;
-
 import java.util.*;
 
 public class MapExercise {
     public static void main(String[] args) {
         MapStudentData mapStudentData = new MapStudentData();
+
         HashMap<String,String> hMap= mapStudentData.getStudent();
 
 
