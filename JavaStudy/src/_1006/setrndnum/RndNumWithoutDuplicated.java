@@ -10,13 +10,11 @@ public class RndNumWithoutDuplicated {
         Set<Character> withoutAlphabet = new HashSet<>();
         for (int i = 0; i < 50; i++) {
             int r = randomNumberGenerator.generate(10);
+            char c = (char)(randomNumberGenerator.generate(26)+65);
             withoutDuplicate.add(r);
+            withoutAlphabet.add(c);
         }
         System.out.println(withoutDuplicate);
-        for(int i=0;i<50;i++){
-            char r = (char)(randomNumberGenerator.generate(26)+65);
-            withoutAlphabet.add(r);
-        }
         System.out.println(withoutAlphabet);
 
     }
