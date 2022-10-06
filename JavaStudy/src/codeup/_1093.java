@@ -1,9 +1,8 @@
 package codeup;
 
-import java.sql.Array;
 import java.util.Scanner;
 
-public class Main {
+public class _1093 {
     public static void main(String[] args) {
         int n;
         int arr[] = new int[23];
