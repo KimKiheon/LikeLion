@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BfNByteReader bfNByteReader1 = new BfNByteReader("Hi.txt",1);
+        BfNByteReader bfNByteReader1 = new BfNByteReader("JavaStudy/src/_1006/textfile/hi.txt",1);
         System.out.println("1글자 읽기");
         bfNByteReader1.bufferedReader();
 
