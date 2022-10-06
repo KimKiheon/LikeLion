@@ -9,10 +9,10 @@ public class AlphabetCountMain {
         for (int i = 0; i < gitRepos.length(); i++) {
 
             char c = gitRepos.charAt(i);
-            if (c >= 65 && c <= 90) {
-                c += 97 - 65;
+            if ('a' <= c && c <= 'z') {
+                c += 32;
             }
-            if (c >= 97 && c <= 122) {
+            if ('A' <= c && c <= 'Z') {
                 if (alphabetCnt.get(c) == null) {
                     alphabetCnt.put(c, 1);
                 } else {
@@ -20,7 +20,7 @@ public class AlphabetCountMain {
                 }
             }
         }
-        for (int i = 97; i < 122; i++) {
+        for (int i = 97; i <= 122; i++) {
             System.out.printf("%c : %d\n", i, alphabetCnt.get((char) i));
         }
     }
