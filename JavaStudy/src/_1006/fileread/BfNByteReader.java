@@ -16,7 +16,9 @@ public class BfNByteReader {
     public void bufferedReader() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(filename),
                 16 * 1024);
-        for (int i = 0; i < n; i++) System.out.println((char) br.read());
+        for (int i = 0; i < n; i++) {
+            System.out.println((char) br.read());
+        }
     }
 
 }

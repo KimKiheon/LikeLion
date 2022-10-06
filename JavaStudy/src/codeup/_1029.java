@@ -2,12 +2,11 @@ package codeup;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class _1029 {
     public static void main(String[] args) {
-        long n;
+        double n;
         Scanner sc = new Scanner(System.in);
-        n= sc.nextLong();
-        System.out.println(n);
+        n= sc.nextDouble();
+        System.out.printf("%.11f",n);
     }
 }
