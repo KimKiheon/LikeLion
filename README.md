@@ -45,4 +45,15 @@
     - BufferReader
 - CodeUp (1021 ~ 1030)
 
+
+## 10 / 07 (Oct.7th) ##
+
+  - 인구 이동 데이터 분석 프로젝트
+    - 대용량 파일 읽기
+    - Data analysis
+    - 파일 생성 및 내용 작성
+  - JavaScript 차트 작성
+  - CodeUp (1031 ~ 1040)
+
 </details>
+
