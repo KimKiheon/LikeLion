@@ -14,7 +14,6 @@ public class NumberPrint {
 
     public void print() {
         System.out.println("전출 Max 도시:" + fromCity);
-        System.out.println("전입 Max 도시:" + toCity
-        );
+        System.out.println("전입 Max 도시:" + toCity);
     }
 }

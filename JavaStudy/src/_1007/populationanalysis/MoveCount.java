@@ -3,9 +3,11 @@ package _1007.populationanalysis;
 public class MoveCount {
     private int from[] = new int[100];
     private int to[] = new int[100];
-    private int fromMax, toMax, fromMaxIdx, toMaxIdx;
+    private int fromMax, toMax, fromMaxIdx=0, toMaxIdx=0;
 
     public MoveCount() {
+        this.fromMax = from[0];
+        this.toMax = to[0];
     }
 
     public void count(int fromNum, int toNum) {
@@ -14,10 +16,7 @@ public class MoveCount {
     }
 
     public void setMaxCount() {
-        fromMax = from[0];
-        toMax = to[0];
-        fromMaxIdx = 0;
-        toMaxIdx = 0;
+
         for (int i = 1; i < 40; i++) {
             if (fromMax < from[i]) {
                 fromMax = from[i];
