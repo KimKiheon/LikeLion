@@ -2,15 +2,12 @@ package codeup;
 
 import java.util.Scanner;
 
-public class Main {
-
+public class _1042 {
     public static void main(String[] args) {
-        int a, b, flag;
+        int a, b;
         Scanner sc = new Scanner(System.in);
         a = sc.nextInt();
         b = sc.nextInt();
-        if (a == b) flag = 1;
-        else flag = 0;
-        System.out.println(flag);
+        System.out.printf("%d", a / b);
     }
 }
