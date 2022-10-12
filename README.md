@@ -80,5 +80,5 @@
   - .sql script file create and load, insert
 - File
   - 대용량 .csv File -> .sql File
--CodeUp (1051 ~ 1060)
+- CodeUp (1051 ~ 1060)
 </details>
