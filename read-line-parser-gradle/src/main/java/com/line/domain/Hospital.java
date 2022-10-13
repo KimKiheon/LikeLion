@@ -1,9 +1,10 @@
 package com.line.domain;
 
 public class Hospital {
-    private String id;
+    private String id, address, district, category, name, subdivision;
+    private int emergencyRoom;
     public Hospital(String id){
-        this.id=id;
+        this.id=id.replaceAll("\"","");
     }
 
     public String getId() {
