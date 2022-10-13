@@ -9,7 +9,7 @@ public class HospitalParser implements Parser<Hospital>{
     @Override
     public Hospital parse(String str) {
         String[] splitted = str.split(",");
-        return new Hospital(splitted[0],splitted[1],splitted[3],Integer.parseInt(replaceAllQuot(splitted[6])), splitted[10],getSubdivision(splitted[10]));
+        return new Hospital(splitted[0],splitted[1],splitted[2],Integer.parseInt(replaceAllQuot(splitted[6])), splitted[10],getSubdivision(splitted[10]));
     }
     public String getSubdivision(String str) {
         String subdivision = "";
