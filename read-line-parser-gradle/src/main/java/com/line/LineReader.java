@@ -17,6 +17,9 @@ public class LineReader <T>{
         this.parser = parser;
         this.isRemoveColumnName = isRemoveColumnName;
     }
+    public LineReader(Parser<T> parser){
+        this.parser=parser;
+    }
 
     List<T> readLines(String filename) throws IOException {
         List<T> result = new ArrayList<>();

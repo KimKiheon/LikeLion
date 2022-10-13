@@ -8,7 +8,4 @@ public class HospitalParser implements Parser<Hospital>{
         String[] splitted = str.split(",");
         return new Hospital(splitted[0]);
     }
-
-
-
 }

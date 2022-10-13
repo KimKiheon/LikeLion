@@ -11,5 +11,10 @@ public class Main {
         String filename = "C:\\Users\\admin\\Downloads\\병원.csv";
         LineReader<Hospital> hospitalLineReader = new LineReader<>(new HospitalParser());
         List<Hospital> hospitals = hospitalLineReader.readLines(filename);
+
+        System.out.println(hospitals.size());
+        for (Hospital hospital : hospitals) {
+            System.out.println(hospital.getId());
+        }
     }
 }
