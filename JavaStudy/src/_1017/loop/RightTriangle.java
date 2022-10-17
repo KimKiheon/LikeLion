@@ -1,4 +1,4 @@
-package _1017;
+package _1017.loop;
 
 public class RightTriangle {
     public static void main(String[] args) {
