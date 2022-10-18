@@ -81,4 +81,26 @@
 - File
   - 대용량 .csv File -> .sql File
 - CodeUp (1051 ~ 1060)
+
+## 10 / 13 (Oct 13)
+- Algorithm
+  - Bubble Sort
+- DataBase
+  - 대용량 파일 데이터 가공(파싱)
+  - 데이터 Insert
+- TDD
+  - TDD방식의 이해
+  - Test 하는방법
+  
+## 10 / 14 (Oct 14)
+- Algorithm
+  - Insertion Sort
+- DataBase
+  - SQL Query in Java
+  - CRUD
+  - Query
+    - Count
+    - Group By
+    - Having
+    - Order By
 </details>
