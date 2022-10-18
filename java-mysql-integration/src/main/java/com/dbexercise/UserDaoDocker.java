@@ -60,6 +60,8 @@ public class UserDaoDocker {
         ps.setString(1, id);
         ps.setString(2, name);
         ps.setString(3, password);
+
+        ps.executeQuery();
         ps.close();
         conn.close();
     }
@@ -68,6 +70,7 @@ public class UserDaoDocker {
         UserDaoDocker userDaoDocker = new UserDaoDocker();
         User user = userDaoDocker.get("1");
         Scanner sc = new Scanner(System.in);
+        userDaoDocker.add("345","hihi","asdasd");
 
         //System.out.println("Id, name, password 입력");
         //userDaoDocker.add(sc.next(), sc.next(), sc.next());
