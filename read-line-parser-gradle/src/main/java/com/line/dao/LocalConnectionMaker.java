@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class LoacalConnectionMaker implements  ConnectionMaker{
+public class LocalConnectionMaker implements  ConnectionMaker{
 
     @Override
     public Connection connectionMaker() throws SQLException {
