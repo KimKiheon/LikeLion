@@ -20,13 +20,17 @@ class UserDaoTest {
     @Test
     void addAndSelect() throws SQLException {
         UserDao userDao = context.getBean("awsUserDao",UserDao.class);
-        String id = "889";
+        String id = "11112";
         User user = new User(id, "spring", "1123");
         userDao.add(user);
 
+
         User selectedUser = userDao.findById(id);
-        Assertions.assertEquals("spring", selectedUser.getName());
-        Assertions.assertEquals("1123", selectedUser.getPassword());
+        Assertions.assertEquals(user.getName(), selectedUser.getName());
+        Assertions.assertEquals(user.getPassword(), selectedUser.getPassword());
+
+        userDao.deleteAll();
+        Assertions.assertEquals(0,userDao.getCount());
     }
 }
 

@@ -68,6 +68,24 @@ public class UserDao {
             throw new RuntimeException(e);
         }
     }
+    public void deleteAll() throws SQLException {
+        Connection c = connectionMaker.connectionMaker();
+        PreparedStatement ps = c.prepareStatement("delete from users");
+        ps.executeUpdate();
+        ps.close();
+        c.close();
+    }
+    public int getCount() throws SQLException {
+        Connection c = connectionMaker.connectionMaker();
+        PreparedStatement ps = c.prepareStatement("select count(*) from users");
+        ResultSet rs = ps.executeQuery();
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        ps.close();
+        c.close();
+        return count;
+    }
 
     public static void main(String[] args) {
         UserDao userDao = new UserDao();
