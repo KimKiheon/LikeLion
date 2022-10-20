@@ -9,6 +9,6 @@ public class LocalConnectionMaker implements  ConnectionMaker{
     @Override
     public Connection connectionMaker() throws SQLException {
         Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/likelion-db","root","12345678");
-        return null;
+        return c;
     }
 }

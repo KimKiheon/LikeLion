@@ -1,9 +1,7 @@
 package dao;
 
-import com.line.dao.AWSUserDaoImpl;
-import com.line.dao.UserDao;
-import com.line.dao.UserDaoFactory;
-import com.line.domain.User;
+
+import domain.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,7 +20,7 @@ class UserDaoTest {
     @Test
     void addAndSelect() throws SQLException {
         UserDao userDao = context.getBean("awsUserDao",UserDao.class);
-        String id = "40";
+        String id = "889";
         User user = new User(id, "spring", "1123");
         userDao.add(user);
 
