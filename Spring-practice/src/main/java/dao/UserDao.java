@@ -20,17 +20,7 @@ public class UserDao {
     public void add(User user) {
         Map<String, String> env = System.getenv();
         try {
-            Connection c = connectionMaker.connectionMaker();
-
-            PreparedStatement ps= new AddStrategy().makePreparedStatement(c);
-            ps.setString(1, user.getId());
-            ps.setString(2, user.getName());
-            ps.setString(3, user.getPassword());
-
-            ps.executeUpdate();
-
-            ps.close();
-            c.close();
+            jdbcContextWithStatementStrategy(new AddStrategy(user));
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -66,11 +56,7 @@ public class UserDao {
     }
 
     public void deleteAll() throws SQLException {
-        Connection c = connectionMaker.connectionMaker();
-        PreparedStatement ps = new DeleteAllStragegy().makePreparedStatement(c);
-        ps.executeUpdate();
-        ps.close();
-        c.close();
+        jdbcContextWithStatementStrategy(new DeleteAllStragegy());
     }
     public int getCount() throws SQLException {
         Connection c = connectionMaker.connectionMaker();
@@ -82,6 +68,13 @@ public class UserDao {
         ps.close();
         c.close();
         return count;
+    }
+    public void jdbcContextWithStatementStrategy(StatementStrategy stmt) throws  SQLException{
+        Connection c = connectionMaker.connectionMaker();
+        PreparedStatement ps = stmt.makePreparedStatement(c);
+        ps.executeUpdate();
+        ps.close();
+        c.close();
     }
 
     public static void main(String[] args) {
