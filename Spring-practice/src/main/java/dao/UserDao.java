@@ -18,7 +18,6 @@ public class UserDao {
 
 
     public void add(User user) {
-        Map<String, String> env = System.getenv();
         try {
             jdbcContextWithStatementStrategy(new AddStrategy(user));
 
@@ -28,24 +27,20 @@ public class UserDao {
     }
 
     public User findById(String id) {
-        Map<String, String> env = System.getenv();
         Connection c;
         try {
-            // DB접속 (ex sql workbeanch실행)
             c = connectionMaker.connectionMaker();
 
-            // Query문 작성
-            PreparedStatement pstmt = c.prepareStatement("SELECT * FROM users WHERE id = ?");
-            pstmt.setString(1, id);
+            PreparedStatement ps = c.prepareStatement("SELECT * FROM users WHERE id = ?");
+            ps.setString(1, id);
 
-            // Query문 실행
-            ResultSet rs = pstmt.executeQuery();
+            ResultSet rs = ps.executeQuery();
             rs.next();
             User user = new User(rs.getString("id"), rs.getString("name"),
                     rs.getString("password"));
 
             rs.close();
-            pstmt.close();
+            ps.close();
             c.close();
 
             return user;
@@ -79,7 +74,7 @@ public class UserDao {
 
     public static void main(String[] args) {
         UserDao userDao = new UserDao();
-        //userDao.add(new User("7", "Ruru", "1234qwer"));
+        userDao.add(new User("9", "Ruru", "1234qwer"));
         User user = userDao.findById("7");
         System.out.println(user.getName());
     }
