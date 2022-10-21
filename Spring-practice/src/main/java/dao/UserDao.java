@@ -5,14 +5,14 @@ import domain.User;
 import java.sql.*;
 import java.util.Map;
 
-public class UserDAO {
-    private final ConnectionMaker connectionMaker;
+public class UserDao {
+    private ConnectionMaker connectionMaker;
 
-    public UserDAO() {
+    public UserDao() {
         this.connectionMaker = new AwsConnectionMaker();
     }
 
-    public UserDAO(ConnectionMaker connectionMaker) {
+    public UserDao(ConnectionMaker connectionMaker) {
         this.connectionMaker = connectionMaker;
     }
 
@@ -22,14 +22,14 @@ public class UserDAO {
         try {
             Connection c = connectionMaker.connectionMaker();
 
-            PreparedStatement pstmt = c.prepareStatement("INSERT INTO users(id, name, password) VALUES(?,?,?);");
-            pstmt.setString(1, user.getId());
-            pstmt.setString(2, user.getName());
-            pstmt.setString(3, user.getPassword());
+            PreparedStatement ps= new AddStrategy().makePreparedStatement(c);
+            ps.setString(1, user.getId());
+            ps.setString(2, user.getName());
+            ps.setString(3, user.getPassword());
 
-            pstmt.executeUpdate();
+            ps.executeUpdate();
 
-            pstmt.close();
+            ps.close();
             c.close();
 
         } catch (SQLException e) {
@@ -65,8 +65,27 @@ public class UserDAO {
         }
     }
 
+    public void deleteAll() throws SQLException {
+        Connection c = connectionMaker.connectionMaker();
+        PreparedStatement ps = new DeleteAllStragegy().makePreparedStatement(c);
+        ps.executeUpdate();
+        ps.close();
+        c.close();
+    }
+    public int getCount() throws SQLException {
+        Connection c = connectionMaker.connectionMaker();
+        PreparedStatement ps = c.prepareStatement("select count(*) from users");
+        ResultSet rs = ps.executeQuery();
+        rs.next();
+        int count = rs.getInt(1);
+        rs.close();
+        ps.close();
+        c.close();
+        return count;
+    }
+
     public static void main(String[] args) {
-        UserDAO userDao = new UserDAO();
+        UserDao userDao = new UserDao();
         //userDao.add(new User("7", "Ruru", "1234qwer"));
         User user = userDao.findById("7");
         System.out.println(user.getName());

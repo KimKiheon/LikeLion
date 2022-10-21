@@ -6,14 +6,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class UserDaoFactory {
     @Bean
-    public UserDAO awsUserDao(){
+    public UserDao awsUserDao(){
         AwsConnectionMaker awsConnectionMaker = new AwsConnectionMaker();
-        UserDAO userDao = new UserDAO(awsConnectionMaker);
+        UserDao userDao = new UserDao(awsConnectionMaker);
         return userDao;
     }
     @Bean
-    public UserDAO localUserDao(){
-        UserDAO userDao = new UserDAO(new LocalConnectionMaker());
+    public UserDao localUserDao(){
+        UserDao userDao = new UserDao(new LocalConnectionMaker());
         return userDao;
     }
 }
