@@ -120,7 +120,7 @@
 - Algorithm
   - loop
   - Recursion Function
--Java & Database
+- Java & Database
   - method refactoring
   - Test
   - SOLID -> SRP
