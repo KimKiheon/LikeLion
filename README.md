@@ -104,3 +104,63 @@
     - Having
     - Order By
 </details>
+
+<details><summary>  Week5 (10.17 ~ 10.21) </summary>
+
+## 10 / 17 (Oct 17)
+- Algorithm
+  - loop
+- Java & Database
+  - Mysql in docker & Java connection
+    - DO, VO, DAO (Select, Insert)
+  - Imformation security
+    - Environment variables
+  
+## 10 / 18 (Oct 18)
+- Algorithm
+  - loop
+  - Recursion Function
+-Java & Database
+  - method refactoring
+  - Test
+  - SOLID -> SRP
+    - Separation of Concern
+      - Abstract Class  
+      - Interface 
+      
+## 10 / 19 (Oct 19)
+- Algorithm
+  - Stack & Stack implementation (Push, Pop)
+- Java & Database
+  - Separation of Concern
+    - Interface
+  - Factory
+  - Singleton pattern
+  - Spring
+    - @Configuration, @Bean
+    - Test
+      - @ExtendWith, @ContextConfiguration, @Autowired
+      
+## 10 / 20 (Oct 20)
+- Algorithm
+  - tack implementation (isEmpty, peek)
+- Java & Database & Spring
+  - deleteAll(), getCount() from Database(MySQL)
+  - Drop vs Delete vs Truncate in MySQL TABLE
+  - Exception Handling
+    - Result Set is empty
+  - Test in JUnit5
+    - @BeforeEach, @Test, @After
+    
+## 10 / 21 (Oct 21)
+- Algorithm
+  - Stack Application in programmers
+- Java & Database & Spring
+  - repeat an exercise
+    - Exception Handling
+    - Test
+    - Interface
+    - refactoring
+  - Strategy pattern
+  
+  
