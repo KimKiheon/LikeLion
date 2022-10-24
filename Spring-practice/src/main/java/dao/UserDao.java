@@ -7,8 +7,10 @@ import java.sql.*;
 
 public class UserDao {
     private final DataSource dataSource;
+    private final JdbcContext jdbcContext;
     public UserDao(DataSource dataSource) {
         this.dataSource = dataSource;
+        this.jdbcContext = new JdbcContext(dataSource);
     }
     public void jdbcContextWithStatementStrategy(StatementStrategy st) throws SQLException {
         Connection c = dataSource.getConnection();
@@ -17,9 +19,21 @@ public class UserDao {
         ps.close();
         c.close();
     }
+
     public void add(User user) throws SQLException {
-        jdbcContextWithStatementStrategy(new AddStrategy(user));
+        jdbcContext.workWithStatementStrategy(new StatementStrategy() {
+            @Override
+            public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
+                PreparedStatement ps = c.prepareStatement("INSERT INTO users (id, name, pssword) " +
+                        "VALUES (?,?,?);");
+                ps.setString(1,user.getId());
+                ps.setString(2,user.getName());
+                ps.setString(3,user.getPassword());
+                return ps;
+            }
+        });
     }
+
     public User findById(String id) {
         Connection c;
         try {
@@ -45,7 +59,12 @@ public class UserDao {
     }
 
     public void deleteAll() throws SQLException {
-        jdbcContextWithStatementStrategy(new DeleteAllStragegy());
+        jdbcContextWithStatementStrategy(new StatementStrategy() {
+            @Override
+            public PreparedStatement makePreparedStatement(Connection c) throws SQLException {
+                return c.prepareStatement("delete from users");
+            }
+        });
     }
 
     public int getCount() throws SQLException {
@@ -59,4 +78,5 @@ public class UserDao {
         c.close();
         return count;
     }
+
 }
