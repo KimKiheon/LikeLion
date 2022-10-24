@@ -3,6 +3,7 @@ package dao;
 import domain.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.sql.SQLException;
 import java.util.EmptyStackException;
+import java.util.List;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = UserDaoFactory.class)
@@ -44,6 +46,18 @@ class UserDaoTest {
     void findByID(){
         Assertions.assertThrows(EmptyStackException.class, () ->
                 userDao.findById("30"));
+    }
+    @Test
+    @DisplayName("없을 때 빈 리스트 리턴 하는지, 있을 때 개수만큼 리턴 하는지")
+    void getAllTest() throws SQLException {
+        userDao.deleteAll();
+        List<User> users = userDao.getAll();
+        Assertions.assertEquals(0,users.size());
+        userDao.add(user1);
+        userDao.add(user2);
+        userDao.add(user3);
+        users = userDao.getAll();
+        Assertions.assertEquals(3,users.size());
     }
 }
 
