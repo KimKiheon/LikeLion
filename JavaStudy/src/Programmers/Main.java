@@ -1,13 +1,17 @@
 package Programmers;
 
-public class Main {
-    public static void main(String[] args) {
-        Main main = new Main();
-        System.out.println(main.Factorial(5));
-    }
-    public int Factorial(int n){
-        if(n==1)return 1;
 
-        return n*Factorial(n-1);
+import java.util.Arrays;
+
+public class Main {
+    public String solution(String[] participant, String[] completion){
+        String answer="";
+        Arrays.sort(participant);
+        Arrays.sort(completion);
+        for(int i=0;i< completion.length;i++){
+            if(!(participant[i].equals(completion[i])))
+                return participant[i];
+        }
+        return participant[participant.length-1];
     }
 }
