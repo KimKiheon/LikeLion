@@ -1,9 +1,9 @@
-package Programmers;
+package Programmers.hash;
 
 
 import java.util.Arrays;
 
-public class Main {
+public class player {
     public String solution(String[] participant, String[] completion){
         String answer="";
         Arrays.sort(participant);

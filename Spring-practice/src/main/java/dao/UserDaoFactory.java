@@ -29,7 +29,7 @@ public class UserDaoFactory {
     }
 
     @Bean
-    DataSource awsDataSource(){
+    DataSource awsDataSource() {
         Map<String, String> env = System.getenv();
         SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
         dataSource.setDriverClass(com.mysql.cj.jdbc.Driver.class);
