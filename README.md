@@ -194,4 +194,5 @@
   - Java
     - Toby Spring repeat
       - Separation of Connection ~ JdbcTemplate & Test (https://github.com/KimKiheon/Toby_Spring)
+      - AnnonymousClass + Lambda
       
