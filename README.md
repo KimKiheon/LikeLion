@@ -143,7 +143,7 @@
       
 ## 10 / 20 (Oct 20)
 - Algorithm
-  - tack implementation (isEmpty, peek)
+  - Stack implementation (isEmpty, peek)
 - Java & Database & Spring
   - deleteAll(), getCount() from Database(MySQL)
   - Drop vs Delete vs Truncate in MySQL TABLE
@@ -163,4 +163,35 @@
     - refactoring
   - Strategy pattern
   
+  </details>
   
+  <details><summary>  Week6 (10.24 ~ 10.28) </summary>
+  
+  ## 10 / 24 (Oct 24)
+  - Algorithm
+    - DataStructure
+      - Queue
+      - Priority Queue
+    - Programmers
+      - k번째 수
+      - 가장 큰 수
+  - Java
+    - Toby Spring3
+      - Strategy pattern apply
+      - jdbcContextWithStrategy & DataSource, DI
+      - Annonymous Class
+      - Separate jdbcContext, -> UserDao depend on jdbcContext
+      - Template Callback
+      - jdbcTemplate
+      - remove duplicates
+          
+  ## 10 / 25 (Oct 25)
+  
+  - Algorithm
+    - Hash, Hash Table
+    - Programmers
+      - 완주하지 못한 선수(https://school.programmers.co.kr/learn/courses/30/lessons/42576)
+  - Java
+    - Toby Spring repeat
+      - Separation of Connection ~ JdbcTemplate & Test (https://github.com/KimKiheon/Toby_Spring)
+      
