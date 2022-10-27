@@ -1,4 +1,4 @@
-package Programmers;
+package Programmers.implementation;
 
 public class SumOfDigit {
     public int solution(int n) {
