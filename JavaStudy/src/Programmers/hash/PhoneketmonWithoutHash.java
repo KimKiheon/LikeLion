@@ -1,6 +1,6 @@
 package Programmers.hash;
 
-public class phoneketmon {
+public class PhoneketmonWithoutHash {
     class Solution {
         public int solution(int[] nums) {
             int answer = 0, cnt = 0;
