@@ -7,14 +7,14 @@ import java.util.Arrays;
 //끝까지 못찾으면 participant배열의 마지막에 위치한 사람이 완주 못한 것
 //2개 다 정렬 후, 같은 인덱스로 접근하기 때문에 중복되는 이름이 있어도 상관 X
 public class playerNoHash {
-    public String solution(String[] participant, String[] completion){
-        String answer="";
+    public String solution(String[] participant, String[] completion) {
+        String answer = "";
         Arrays.sort(participant);
         Arrays.sort(completion);
-        for(int i=0;i< completion.length;i++){
-            if(!(participant[i].equals(completion[i])))
+        for (int i = 0; i < completion.length; i++) {
+            if (!(participant[i].equals(completion[i])))
                 return participant[i];
         }
-        return participant[participant.length-1];
+        return participant[participant.length - 1];
     }
 }
