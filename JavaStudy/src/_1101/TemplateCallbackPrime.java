@@ -1,12 +1,12 @@
 package _1101;
 
-public class TemplateCallbackPrime {
-    boolean someOperation(int a, int b){
-        return a < b;
-    }
+interface StatementStrategy {
+    boolean compare(int a, int b);
+}
 
-    boolean isPrime(int n) {
-        for (int i = 2;someOperation(i,n); i++) {
+public class TemplateCallbackPrime {
+    boolean isPrime(int n, StatementStrategy stmt) {
+        for (int i = 2; stmt.compare(i, n); i++) {
             if (n % i == 0) return false;
         }
         return true;
