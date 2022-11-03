@@ -8,7 +8,9 @@ public class IsPrime {
 
         for (int i = 2; i <= Math.sqrt(n); i++) {
             if (primeNum[i] == 0) continue;
-            for (int j = i * i; j <= n; j += i) primeNum[j] = 0;
+            for (int j = i * i; j <= n; j += i) {
+                primeNum[j] = 0;
+            }
         }
         for (int i = 2; i <= n; i++) {
             if (primeNum[i] == i) answer++;

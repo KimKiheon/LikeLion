@@ -1,9 +1,5 @@
 package _1101;
 
-interface StatementStrategy {
-    boolean compare(int a, int b);
-}
-
 public class TemplateCallbackPrime {
     boolean isPrime(int n, StatementStrategy stmt) {
         for (int i = 2; stmt.compare(i, n); i++) {
