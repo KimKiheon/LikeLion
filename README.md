@@ -175,6 +175,7 @@
     - Programmers
       - k번째 수
       - 가장 큰 수
+        -code: https://github.com/KimKiheon/LikeLion/tree/main/JavaStudy/src/Programmers/sort
   - Java
     - Toby Spring3
       - Strategy pattern apply
@@ -186,13 +187,77 @@
       - remove duplicates
           
   ## 10 / 25 (Oct 25)
-  
   - Algorithm
     - Hash, Hash Table
     - Programmers
       - 완주하지 못한 선수(https://school.programmers.co.kr/learn/courses/30/lessons/42576)
+        -code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/hash/playerNoHash.java
   - Java
     - Toby Spring repeat
       - Separation of Connection ~ JdbcTemplate & Test (https://github.com/KimKiheon/Toby_Spring)
       - AnnonymousClass + Lambda
+      
+   ## 10 / 26 (Oct 26)
+   - Algorithm
+    - Hash
+    - Programmers
+      - 폰켓몬 (https://school.programmers.co.kr/learn/courses/30/lessons/1845)
+        - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/hash/PhoneketmonWithoutHash.java
+        
+   - Java & Spring(boot)
+    - Spring's feature
+      - IoC(Inversion of Control)
+      - DI(Dependency Injection)
+        - constructor
+        - field
+        - setter
+      - AoP
+    - SpringBoot build
+      - Maven
+      - Gradle
+    - Persistence
+    - Rest API 
+    - Mapping
+      - @RestController
+      - @RequestMapping(method<Get, Post, Delete, Put>)
+      - @GetMapping
+      - @Pathvariable
+    - Test
+      - Talend API Tester
+      
+  ## 10 / 27 (Oct 27)
+  - Spring(boot)
+    - Mapping
+      - @RequestParam -> GetMethod
+      - Path parameter
+      - Query parameter
+    - DTO(Data Transfer Object), VO(Value Object)
+    - Post API
+      - @RequestBody
+        - body - JSON
+    - Get vs Post
+    - Put API -> Update
+      - ResponseEntity
+    - Delete API -> Delete
+    - Swagger 3.0 version (https://velog.io/@wotj7687/Spring-Boot-Swagger-3.0.0-%EC%A0%81%EC%9A%A9)
+      - SwaggerConfiguration
+      - dependency
+      - url: {Address}:{port}/swagger-ui/
+      
+  ## 10 / 28 (Oct 28)
+  - Algorithm
+    - Hash
+    - Programmers
+      - 전화번호 목록 (https://school.programmers.co.kr/learn/courses/30/lessons/42577)
+        - code : https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/hash/PhoneNumberList.java
+  - Spring(Boot)
+    - API Request in Swagger
+    - Logging - Logback
+    - ORM(Object Relational Maapping)
+    - CRUD board API
+    - Environment Variable
+    - REST API URI design rules
+      </details>
+    
+      
       
