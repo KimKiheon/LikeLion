@@ -250,6 +250,7 @@
     - Programmers
       - 전화번호 목록 (https://school.programmers.co.kr/learn/courses/30/lessons/42577)
         - code : https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/hash/PhoneNumberList.java
+        
   - Spring(Boot)
     - API Request in Swagger
     - Logging - Logback
@@ -259,5 +260,121 @@
     - REST API URI design rules
       </details>
     
+  <details><summary>  Week7 (10.31 ~ 11.03) </summary>
+  
+  ## 10 / 31 (Oct 31)
+  
+  - Algorithm
+    - Brute Force
+    - Programmers
+      - 모의고사 https://school.programmers.co.kr/learn/courses/30/lessons/42840
+      - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/bruteforce/MockTest.java
+      
+  - Spring(Boot) Project: 전국의 모든 병, 의원 데이터 조회할 수 있는 API 구현 with AWS EC2
+    - DB Table 설계
+    - .csv파일 Parser 구현
+    - Data Mapping
+    - Factory(IoC, DI)
+    - Annotaion
+      - @SpringBootTest
+      - @Autowired
+      
+  ## 11 / 1 (Nov 1)
+   
+  - Algorithm
+    - Prime Number & Template CallBack 적용
+      - code 
+        - https://github.com/KimKiheon/LikeLion/tree/main/JavaStudy/src/_1101
+        
+  - Spring(Boot) Project: 전국의 모든 병, 의원 데이터 조회할 수 있는 API 구현 with AWS EC2
+    - Data Insert
+    - Architecture 설계
+    - Delete All
+    - Get Count
+    - FindByID
+    
+ ## 11 / 2 (Nov 2)
+  - Algorithm
+    - 에라토스테네스의 체 (Sieve of Eratosthenes)
+    - Programmers
+      - 소수 찾기: https://school.programmers.co.kr/learn/courses/30/lessons/12921
+      - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/_1102/IsPrime.java
+      
+  - Spring(Boot) Project: 전국의 모든 병, 의원 데이터 조회할 수 있는 API 구현 with AWS EC2
+    - API에서의 MVC
+    - Optinal
+    - Service
+    - EC2 T3.small 에서의 속도 이슈
+      - 병렬처리 해결
+    - Docker에서 빌드, 배포하기
+      - DockerFile
+      - docker build -t
+      - Swagger 접근
+      
+ ## 11 / 3 (Nov 3)
+  - Algorithm
+    - 에라토스테네스의 체
+  - Docker
+    - Container
+    - Image
+    </details>
+      
+  <details><summary>  Week8 (11.07 ~ 11.11) </summary>
+  ## 11 / 7 (Nov 7)
+    - Algorithm
+      - Programmers
+        - 하샤드의 수: https://school.programmers.co.kr/learn/courses/30/lessons/12947
+          - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/_1107/HarshadNumber.java
+        - 나누어 떨어지는 숫자 배열: https://school.programmers.co.kr/learn/courses/30/lessons/12910
+          - code: 
+            - ArrayList 사용: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/_1107/DivisibleNumberList.java
+            - PriorityQueue 사용: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/Programmers/_1107/DivisibleNumberListPriorityQueue.java
+            
+    - SpringBoot MVC 
+      - Gradle Build & Mustache
+        - Controller -> HelloWorld
+        - .mustache
+        - Mapping & PathVariable
+        - 한글 깨짐 현상
+        - BootStrap5 적용
+      - 게시판 구현
+        - Domain
+          - DTO
+          - CRUD logic
+      - JPA
+        - Entity
+        - DB 정보 입력 (환경변수 or .properties or .yml)
+        - Repository Interface(DAO)
+        - spring.jap 설정
+          - show-sql:
+          - database-platform
+          - database: DB종류 ex)MySQL, Oracle ....
+          - hibernate.ddl-auto: value ex) create, create-drop, update, validate, none
+  
+  ## 11 / 08 (Nov 8)
+  - Algorithm
+    - 단순 탐색
+      - Codeup: https://codeup.kr/problem.php?id=3001
+        - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/codeup/_3001.java
+    - 이진 탐색(Binary Search)
+      - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/_1108/BinarySearch.java
+      - Codeup: https://codeup.kr/problem.php?id=2083
+        - code: https://github.com/KimKiheon/LikeLion/blob/main/JavaStudy/src/codeup/_2083.java
+  
+  - SpringBoot MVC
+    - 게시판 구현
+      - @GenaratedValue -> Sequence, Identity
+      - @Id
+      - @Column
+      - CRUD 구현
+   ## 11 / 09 (Nov 9)
+   - Algorithm
+    - Selection Sort
+   
+   - SpringBoot MVC
+    - 게시판 구현 복습
       
       
+  
+  
+  </details>
