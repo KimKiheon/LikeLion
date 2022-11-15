@@ -6,24 +6,22 @@ public class QuickSort {
     public static void quickSort(int[] arr, int start, int end) {
         if (start >= end) return;
 
-        int pivot = arr[start], left = start + 1, right = end;
+        int pivot = arr[(start+end)/2], left = start, right = end;
         while (left <= right) {
-            while (arr[left] <= pivot) left++;
-            while (arr[right] >= pivot&&right>start) right--;
+            while (arr[left] < pivot) left++;
+            while (arr[right] > pivot) right--;
 
-            if (left > right) {
-                int tmp = arr[right];
-                arr[right] = arr[start];
-                arr[start] = tmp;
-            } else {
-                int tmp = arr[right];
-                arr[right] = arr[left];
-                arr[left] = tmp;
+            if(left<=right){
+                int tmp=arr[left];
+                arr[left]=arr[right];
+                arr[right]=tmp;
+                left++;
+                right--;
             }
 
         }
-        quickSort(arr, start, right - 1);
-        quickSort(arr, right + 1, end);
+        quickSort(arr, start, right);
+        quickSort(arr, left, end);
     }
 
     public static void main(String[] args) {
