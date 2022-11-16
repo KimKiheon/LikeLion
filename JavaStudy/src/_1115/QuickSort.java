@@ -8,10 +8,10 @@ public class QuickSort {
 
         int pivot = arr[(start+end)/2], left = start, right = end;
         while (left <= right) {
-            while (arr[left] < pivot) left++;
-            while (arr[right] > pivot) right--;
+            while (arr[left] < pivot) left++; //pivot보다 큰 값을 만날 때까지 left++
+            while (arr[right] > pivot) right--; //pivot보다 작은 값을 만날 때까지 right++
 
-            if(left<=right){
+            if(left<=right){ //left와 right 인덱스에 있는 원소 교체 후, left+1 right-1
                 int tmp=arr[left];
                 arr[left]=arr[right];
                 arr[right]=tmp;
@@ -20,8 +20,8 @@ public class QuickSort {
             }
 
         }
-        quickSort(arr, start, right);
-        quickSort(arr, left, end);
+        quickSort(arr, start, right); //pivot기준 왼쪽 리스트 == 작은 값 리스트
+        quickSort(arr, left, end);//pivot 기준 오른쪽 리스트
     }
 
     public static void main(String[] args) {
