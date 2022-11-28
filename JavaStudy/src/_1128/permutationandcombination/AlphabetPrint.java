@@ -1,6 +1,6 @@
 package _1128.permutationandcombination;
 
-public class Main {
+public class AlphabetPrint {
     void function1() {
         for (int i = 0; i < 26; i++) {
             System.out.printf("%c\n", i + 'A');
@@ -13,13 +13,12 @@ public class Main {
                 System.out.printf("%c%c\n", i + 'A', j + 'A');
             }
         }
-
     }
 
     public static void main(String[] args) {
-        Main m = new Main();
-        m.function1();
-        m.function2();
+        AlphabetPrint alphabetPrint = new AlphabetPrint();
+        alphabetPrint.function1();
+        alphabetPrint.function2();
     }
 
 }
