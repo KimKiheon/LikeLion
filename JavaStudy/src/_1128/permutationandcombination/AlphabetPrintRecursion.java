@@ -15,11 +15,12 @@ public class AlphabetPrintRecursion {
             arr[idx] = 0;
         }
     }
+
     public static void main(String[] args) {
         AlphabetPrintRecursion alphabetPrintRecursion = new AlphabetPrintRecursion();
 
-        alphabetPrintRecursion.function(0,26,1);
-        alphabetPrintRecursion.function(0, 26, 2);
-        alphabetPrintRecursion.function(0,26,3);
+        alphabetPrintRecursion.function(0, 26, 1); //A~Z
+        alphabetPrintRecursion.function(0, 26, 2); //AA~ZZ
+        alphabetPrintRecursion.function(0, 26, 3); //AAA~ZZZ
     }
 }
